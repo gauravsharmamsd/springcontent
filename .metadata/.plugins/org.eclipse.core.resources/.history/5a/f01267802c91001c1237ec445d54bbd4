@@ -1,0 +1,15 @@
+package com.stu;
+
+public class Test {
+
+	public static void main(String[] args) {
+Student s=new Student();
+s.setAddress("Pune");
+s.setName("Maahi");
+s.setRollNo(5);
+System.out.println(s);
+
+
+	}
+
+}

@@ -1,0 +1,8 @@
+package com.database;
+
+import com.stu.Student;
+
+public interface StudentDAO {
+void insert(Student student);
+boolean deleteRecordByRollNo(int rollNo);
+}

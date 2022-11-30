@@ -1,0 +1,7 @@
+<classpath>
+  <container id="FirstMvcProject!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="E:/Spring/FirstMvcProject/src/main/webapp/WEB-INF/lib/spring-webmvc-4.2.5.RELEASE.jar">
+      <source-attachment-path>E:/SouceCodeGenertor</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

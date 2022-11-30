@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	   <bean id = "javaCollection" class ="com.worldline_bank.MyBankApp">
+      
+     
+   <!--    <property name = "bank">
+         <list>
+           <ref bean="hdfc"></ref>
+            <ref bean="sbi"></ref>
+             <ref bean="sbi"></ref>
+          
+         </list>
+      </property>-->
+      <property name="bank">
+      <set>
+      <ref  bean="hdfc"></ref>
+       <ref  bean="sbi"></ref> 
+         <ref  bean="sbi"></ref> 
+       
+     </set>
+      </property>
+      
+	   </bean>
+	<bean id="hdfc" class="com.worldline_bank.HDFCBank">
+		<constructor-arg ref="a"></constructor-arg>
+	</bean>
+	<!-- <bean id="SBI" class="com.worldline_bank.MyBankApp">
+		<constructor-arg ref="sbi"></constructor-arg>
+	</bean>-->
+	<bean id="sbi" class="com.worldline_bank.SBIBank">
+		<constructor-arg ref="ap"></constructor-arg>
+	</bean>
+		<bean id="sbbi" class="com.worldline_bank.SBIBank">
+		<constructor-arg ref="app"></constructor-arg>
+	</bean>
+	
+	<bean id="a" class="com.worldline_bank.Account">
+		<constructor-arg value="virat"></constructor-arg>
+		<constructor-arg value="101"></constructor-arg>
+	</bean>
+	<bean id="app" class="com.worldline_bank.Account">
+		<constructor-arg value="kohli"></constructor-arg>
+		<constructor-arg value="251"></constructor-arg>
+	</bean>
+	<bean id="ap" class="com.worldline_bank.Account">
+		<constructor-arg value="kohli"></constructor-arg>
+		<constructor-arg value="251"></constructor-arg>
+	</bean>
+
+</beans>

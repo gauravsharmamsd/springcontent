@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="a1" class="com.worldline.A">
+   <constructor-arg ref="b"></constructor-arg>
+</bean>
+<bean id="a2" class="com.worldline.A">
+   <constructor-arg ref="b2"></constructor-arg>
+   <constructor-arg value="Namaste"></constructor-arg> <!--  This is going to set value to S of A -->
+   <constructor-arg value="100"></constructor-arg> <!--  i of A will be set to 100 -->
+</bean>
+<bean id="b" class="com.worldline.B">
+   <constructor-arg ref="c"></constructor-arg>
+   <constructor-arg ref="d"></constructor-arg>
+</bean>
+<bean id="b2" class="com.worldline.B">
+   <constructor-arg ref="c"></constructor-arg>
+   <constructor-arg ref="d"></constructor-arg>
+   <constructor-arg value="Hello"></constructor-arg>
+</bean>
+<bean id="c" class="com.worldline.C">
+   <constructor-arg ref="d"></constructor-arg>
+</bean>
+<bean id="d" class="com.worldline.D">
+</bean>
+</beans>

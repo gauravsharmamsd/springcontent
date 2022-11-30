@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="address" class="com.spring.Address">
+		<constructor-arg index="0" value="#{T(com.spring.Injection).getPin()}" />
+		<constructor-arg index="1" value="#{T(com.spring.Injection).getCity()}" />
+		<constructor-arg index="2" value="#{T(com.spring.Injection).getState()}" />
+	</bean>
+	<!--	<bean id="employee" class="com.spring.Employee" >
+<constructor-arg index="0" value="Maahi" />
+<constructor-arg index="1" value="14"/>
+<constructor-arg index="2" value="Grey"/>
+<constructor-arg index="3" ref="address"/>-->
+
+	<bean id="employee" class="com.spring.Employee">
+		<property name="name" value="#{calculator.getName()}" />
+		<property name="id" value="#{calculator.getId()}" />
+		<property name="color" value="#{calculator.getColor()}"/>
+		<property name="addr" ref="address" />
+	</bean>
+<bean id="calculator" class="com.spring.Injection"/>
+</beans>

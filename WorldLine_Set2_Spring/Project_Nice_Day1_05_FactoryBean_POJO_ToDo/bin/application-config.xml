@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+  <!--  Here constructor-arg actually is an argument to the factory-method and not a constructor arg for BankImpl -->
+<bean id="bankService" class="bank.server.internal.BankImpl" factory-bean="myfactory" factory-method="getInstance"> 
+<constructor-arg ref="acctRepo"></constructor-arg> 
+</bean>
+<bean id="myfactory" class="bank.server.internal.BankFactory">
+<!--property name="acctrepo" ref="acctRepo"/>-->
+</bean>
+<bean id="acctRepo" class="bank.server.internal.AccountRepositoryImpl">
+
+</bean>
+<bean id="acct1" class="bank.server.internal.Account">
+   <property name="name" value="#{T(bank.server.internal.Name).getName()}"></property>
+<property value="#{calculator.getInterest()}" name="rate"/>
+</bean>
+<bean id="calculator" class="bank.server.internal.InterestCalculator"></bean>
+</beans>

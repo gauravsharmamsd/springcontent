@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Home/src/main/webapp/WEB-INF/fc.xml&apos; to &apos;DispatcherServlet.xml&apos;" description="Rename resource &apos;fc.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/WEB-INF/fc.xml" name="DispatcherServlet.xml" stamp="1645277318091" updateReferences="true"/>
+</session>

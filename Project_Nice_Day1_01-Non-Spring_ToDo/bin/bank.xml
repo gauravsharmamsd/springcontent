@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id ="bank" class ="bank.server.internal.BankImpl">
+	  <constructor-arg ref="acct"></constructor-arg>
+   
+     
+	</bean>
+	<bean id ="acct" class ="bank.server.internal.AccountRepositoryImpl">
+	<property name="accounts">
+		<set>
+				<ref bean="acct1"></ref>
+				<ref bean="acct2"></ref>
+				<ref bean="acct3"></ref>
+			
+			</set>
+		
+	</property>
+</bean>
+
+	<bean id ="acct1" class ="bank.server.internal.Account">
+	<constructor-arg value="100" >
+	</constructor-arg>
+	<constructor-arg value="Ajay" >
+	</constructor-arg>
+		<constructor-arg value="235">
+	</constructor-arg>
+	
+	</bean>
+	
+	<bean id ="acct2" class ="bank.server.internal.Account">
+	<constructor-arg value="2000" >
+	</constructor-arg>
+	<constructor-arg value="Atul" >
+	</constructor-arg>
+		<constructor-arg value="335" >
+	</constructor-arg>
+	
+	</bean>
+	
+	<bean id ="acct3" class ="bank.server.internal.Account">
+	<constructor-arg value="3000" >
+	</constructor-arg>
+	<constructor-arg value="Surya" >
+	</constructor-arg>
+		<constructor-arg value="435" >
+	</constructor-arg>
+	
+	</bean>
+	</beans>

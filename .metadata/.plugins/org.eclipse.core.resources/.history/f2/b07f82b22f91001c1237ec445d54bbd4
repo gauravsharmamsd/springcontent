@@ -1,0 +1,22 @@
+package com.database;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.stu.Student;
+
+public class StudentImpl implements StudentDAO{
+ private JdbcTemplate jdbc;
+	
+
+
+	@Override
+	public void insert(Student student) {
+		String sqlc="create table student (RollNo int(5),Name Varchar(20),Address(20))";
+		jdbc.update(sqlc);
+		String sql="insert into student values(?,?,?)";
+		Object[] o= {student.getName(),student.getRollNo(),student.getAddress()};
+		jdbc.update(sql,o);
+		
+	}
+
+}

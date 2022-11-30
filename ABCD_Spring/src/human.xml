@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!--<bean id="human" class="Annotation.Human">
+		<property name="heart" ref="hrt"></property>
+	</bean>
+	<bean id="hrt" class="Annotation.Heart" />-->
+
+	<!--	<bean id="human" class="Annotation.Human" autowire="byName">
+	
+	</bean>
+<bean id="heart" class="Annotation.Heart" /-->
+
+	<bean id="hrtObj" class="Annotation.Heart" />
+	
+	<bean id="human" class="Annotation.Human" autowire="byType"></bean>
+	<bean id="heart" class="Annotation.Heart" />
+</beans>

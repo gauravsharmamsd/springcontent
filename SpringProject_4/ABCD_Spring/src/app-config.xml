@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!--  I- Inject Method implementation using Look-Up Method 
+<bean id="magician" class="Magician">
+   <lookup-method  name="getBox" bean="birdBox"/>
+</bean>
+<bean id="birdBox" class="BirdBox"></bean>
+<bean id="elephantBox" class="Box"></bean>
+  II Using replaced_Method-->
+	<bean id="shop" class="Shop">
+		<replaced-method name="getDiscount" replacer="dicounter"></replaced-method>
+	</bean>
+	<bean id="dicounter" class="DiscountReplacer">
+		<constructor-arg>
+
+			<map>
+				<entry key="Diwali" value="15" />
+				<entry key="Holi" value="20" />
+				<entry key="Dussera" value="18" />
+				<entry key="Eid" value="21" />
+			</map>
+		</constructor-arg>
+	</bean>
+</beans>

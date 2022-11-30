@@ -1,0 +1,29 @@
+package com.stu;
+
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.database.StudentDAO;
+import com.database.StudentImpl;
+
+public class Test {
+
+	public static void main(String[] args) {
+		ApplicationContext ctx =new ClassPathXmlApplicationContext("student.xml");
+		System.out.println("Application loaded");
+		StudentImpl stu=(StudentImpl) ctx.getBean("studentImpl");
+		
+//      Student s=new Student();
+//      s.setAddress("Rahil");
+//      s.setName("Sonu");
+//      s.setRollNo(8);
+//      System.out.println(s);
+//StudentDAO sd=new StudentImpl();
+//      stu.insert(s);
+      stu.deleteRecordByRollNo(16);
+
+
+	}
+
+}

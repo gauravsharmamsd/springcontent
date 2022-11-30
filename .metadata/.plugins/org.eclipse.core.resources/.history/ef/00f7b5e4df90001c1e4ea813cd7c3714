@@ -1,0 +1,4 @@
+mysqlDriver=com.mysql.jdbc.Driver
+mysqlURL=jdbc:mysql://localhost/BankServlet
+mysqlUser=root
+mysqlPassword=A2016ece@4701

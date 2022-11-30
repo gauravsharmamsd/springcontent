@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="javaCollection" class="BankApp">
+
+		<constructor-arg >
+
+			<set>
+				<ref bean="hdfc"></ref>
+				<ref bean="sbi"></ref>
+				<ref bean="sbi"></ref>
+				<ref bean="syn"></ref>
+
+			</set>
+		</constructor-arg >
+	</bean>
+	<bean id="syn" class="Syndicate">
+	<property name="branch" value="Dhaulana"></property>
+		<constructor-arg ref="sss"></constructor-arg>
+		
+	</bean>
+	<bean id="sss" class="Account">
+		<constructor-arg value="65000"></constructor-arg>
+		<constructor-arg value="maahi"></constructor-arg>
+		
+	</bean>
+
+
+	<bean id="hdfc" class="HDFC">
+	<property name="branch" value="Hapur"></property>
+		<constructor-arg ref="met"></constructor-arg>
+	</bean>
+
+	<bean id="met" class="Account">
+		<constructor-arg value="45000"></constructor-arg>
+		<constructor-arg value="G"></constructor-arg>
+		
+	</bean>
+
+
+	<bean id="sbi" class="SBI">
+	<property name="branch" value="Siwaya"></property>
+		<constructor-arg ref="meet"></constructor-arg>
+	</bean>
+	<bean id="meet" class="Account">
+		<constructor-arg value="55000"></constructor-arg>
+		<constructor-arg value="Shivam"></constructor-arg>
+		
+	</bean>
+
+</beans>

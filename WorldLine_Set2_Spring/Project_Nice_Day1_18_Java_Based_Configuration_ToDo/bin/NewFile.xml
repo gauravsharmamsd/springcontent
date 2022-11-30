@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+<context:component-scan base-package="com.spring"></context:component-scan>
+<util>
+<bean id="bank" class="BankConfig">
+	<property name="url" value="${oracleURL}" />
+	<property name="username" value="${oracleUser}" />
+
+</bean>
+<bean id="bankService" class="BankImpl" scope="prototype">
+	<propert name="" calss="Account">
+		<constructor-arg>
+			<list>
+				<ref bean="currentAccount" />
+				<ref bean="saving" />
+				<ref bean="loan" />
+			</list>
+		</constructor-arg>
+
+
+</bean><bean id="current" class="CurentAccount">
+	<constructor-arg index="0" value="Ramkrishna it" />
+	<constructor-arg index="1" value="12545" />
+	<property name="acctNo" value="12345" />
+</bean>
+<bean id="acctRepo" class="AccountRepository">
+	<constructor-arg index="0" ref="dataSource">
+	
+</bean>
+<bean id="dataSource" class="DriverManager">
+	<constructor-arg index="0" value="${oracleURL}" />
+	<constructor-arg index="1" value="${oracleUser}" />
+	<property name="driverClassName" value="${oracleDriverNme}" />
+	

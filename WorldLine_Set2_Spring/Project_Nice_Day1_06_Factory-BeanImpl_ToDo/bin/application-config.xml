@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+  <!--  Here constructor-arg actually is an argument to the factory-method and not a constructor arg for BankImpl -->
+  <bean id="account" class="bank.server.internal.AccountRepositoryImpl"/>
+ 
+<bean id="bankService" class="bank.server.internal.BankImpl">
+<property name="accountRepo" value="#{(new bank.server.internal.AccountRepositoryFactory()).getObject()}"></property>
+<property name="bankName" value="SBI"></property>
+<property name="branchCode" value="1234"></property>
+</bean>
+</beans>
+

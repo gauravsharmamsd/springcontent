@@ -1,0 +1,13 @@
+127.0.0.1 - - [13/Mar/2022:23:43:32 -0700] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [13/Mar/2022:23:43:33 -0700] "GET /FirstMvcProject/ HTTP/1.1" 404 771
+0:0:0:0:0:0:0:1 - - [13/Mar/2022:23:43:33 -0700] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [13/Mar/2022:23:44:11 -0700] "GET /FirstMvcProject/xyz/bat HTTP/1.1" 404 758
+0:0:0:0:0:0:0:1 - - [13/Mar/2022:23:45:03 -0700] "GET /FirstMvcProject/xyz/hello HTTP/1.1" 400 839
+0:0:0:0:0:0:0:1 - - [13/Mar/2022:23:45:29 -0700] "GET /FirstMvcProject/xyz/namastee HTTP/1.1" 200 281
+0:0:0:0:0:0:0:1 - - [13/Mar/2022:23:46:09 -0700] "GET /FirstMvcProject/xyz/hello?name=g HTTP/1.1" 200 266
+0:0:0:0:0:0:0:1 - - [13/Mar/2022:23:46:16 -0700] "GET /FirstMvcProject/xyz/hello?name=gaurav HTTP/1.1" 200 271
+127.0.0.1 - - [13/Mar/2022:23:53:24 -0700] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [13/Mar/2022:23:53:27 -0700] "GET /spring-maven-firstProject/ HTTP/1.1" 200 70
+0:0:0:0:0:0:0:1 - - [13/Mar/2022:23:54:24 -0700] "GET /spring-maven-firstProject/abc/customers/10 HTTP/1.1" 200 282
+0:0:0:0:0:0:0:1 - - [13/Mar/2022:23:54:30 -0700] "GET /spring-maven-firstProject/abc/customers/7 HTTP/1.1" 200 317
+0:0:0:0:0:0:0:1 - - [13/Mar/2022:23:55:06 -0700] "GET /spring-maven-firstProject/abc/hello?name=hh HTTP/1.1" 200 277

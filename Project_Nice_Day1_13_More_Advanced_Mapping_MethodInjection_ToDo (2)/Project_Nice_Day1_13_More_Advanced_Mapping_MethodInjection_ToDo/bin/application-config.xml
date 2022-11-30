@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+
+	
+	<bean id="magician" class="com.rits.Magician" >
+	
+	     <property name="magicwords" value="Apsara  Wow!!"></property>
+	     <property name="box" ref="beauty"></property>
+	</bean>
+	
+	<bean id="magician2" class="com.rits.Magician" >
+	     <property name="magicwords" value="Choo Mantar !!"></property>
+	     <property name="box" ref="elephantbox"></property>
+	</bean>
+    
+    <bean id="elephantbox" class="com.rits.ElephantBox" />
+    <bean id="beauty" class="com.rits.BeautifulAssistantBox" />
+
+</beans>
+
+
+
+
+<!--bean id="shop" class="com.methodReplacer.Shop" >
+	<replaced-method name="buy" replacer="buys"></replaced-method>
+	</!--bean>
+	<bean id="buys" class="com.methodReplacer.Buy"></bean>
+</beans>-->

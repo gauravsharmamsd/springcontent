@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="hdfc" class="com.bank.HDFC">
+<!--    <constructor-arg ref="act"></constructor-arg> -->
+    <constructor-arg >
+   	 <set>
+   	 	<ref bean="act"></ref>
+   	 	<ref bean="act1"></ref>
+   	 </set>
+   </constructor-arg>
+   <property name="branch" value="Pune"/>
+</bean>
+
+<bean id="act" class="com.bank.Account">
+	<constructor-arg value="Akki@T"></constructor-arg>
+	<constructor-arg value="101"></constructor-arg>
+	<constructor-arg value="25000"></constructor-arg>
+</bean>
+<bean id="act1" class="com.bank.Account">
+	<constructor-arg value="Bukki@T"></constructor-arg>
+	<constructor-arg value="102"></constructor-arg>
+	<constructor-arg value="5000"></constructor-arg>
+</bean>
+<!-- <bean id="bankApp" class="com.bank.BankApplication"> -->
+<!--    <constructor-arg ref="hdfc"></constructor-arg> -->
+<!-- </bean> -->
+
+<bean id="icici" class="com.bank.ICICI">
+<!--    <constructor-arg ref="act"></constructor-arg> -->
+     <constructor-arg >
+   	 <set>
+   	 	<ref bean="act"></ref>
+   	 	<ref bean="act1"></ref>
+   	 </set>
+   </constructor-arg>
+   <property name="branch" value="Mumbai"/>
+</bean>
+
+<bean id="bankAppIC" class="com.bank.BankApplication">
+	   <constructor-arg >
+	   	 <list>
+	   	 	<ref bean="hdfc"></ref>
+	   	 	<ref bean="icici"></ref>
+	   	 </list>
+	   </constructor-arg>
+</bean>
+</beans>

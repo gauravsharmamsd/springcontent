@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;mvc-withoutXML&apos;" deleteContents="true" description="Delete resource &apos;mvc-withoutXML&apos;" element1="/mvc-withoutXML" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1646133637563"/>&#x0A;<refactoring comment="Rename resource &apos;LoveCalci2&apos; to &apos;spring-maven-loveCalculator-3rdApproach&apos;" description="Rename resource &apos;LoveCalci2&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/LoveCalci2" name="spring-maven-loveCalculator-3rdApproach" stamp="1646135542690" updateReferences="true"/>
+</session>
